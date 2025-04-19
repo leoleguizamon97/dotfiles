@@ -1,0 +1,96 @@
+{
+	"Esc": "Escape",
+	"F1": "ToggleHelp",
+	"F2": "Save",
+	"F3": "Find",
+
+	"Up": "CursorUp",
+	"Down": "CursorDown",
+    "Right": "CursorRight",
+	"Left": "CursorLeft",
+	
+	"Enter": "InsertNewline",
+	"Backspace": "Backspace",
+
+	"Home": "StartOfText",
+    "End": "EndOfLine",
+	"PageDown": "CursorPageDown",
+    "PageUp": "CursorPageUp",
+    
+	"Insert": "ToggleOverwriteMode",
+    "Delete": "Delete",
+    
+	"Tab": "Autocomplete|IndentSelection|InsertTab",
+	"Backtab": "OutdentSelection|OutdentLine",
+
+    "CtrlUp": "CursorStart",
+    "CtrlDown": "CursorEnd",
+
+    "CtrlHome": "CursorStart",
+	"CtrlEnd": "CursorEnd",
+    "CtrlPageUp": "PreviousTab",
+	"CtrlPageDown": "NextTab",
+
+	"CtrlShiftUp": "SelectToStart",
+	"CtrlShiftDown": "SelectToEnd",
+    "CtrlShiftLeft": "SelectWordLeft",
+    "CtrlShiftRight": "SelectWordRight",
+
+    "AltUp": "MoveLinesUp",
+	"AltDown": "MoveLinesDown",
+    "AltRight": "EndOfLine",
+    "AltLeft": "StartOfTextToggle",
+    
+    "AltShiftUp": "SpawnMultiCursorUp",
+	"AltShiftDown": "SpawnMultiCursorDown",
+    "AltShiftRight": "SelectToEndOfLine",
+    "AltShiftLeft": "SelectToStartOfTextToggle",
+
+	"ShiftUp": "SelectUp",
+	"ShiftDown": "SelectDown",
+    "ShiftRight": "SelectRight",
+    "ShiftLeft": "SelectLeft",
+
+	"ShiftEnd": "SelectToEndOfLine",
+	"ShiftPageUp": "SelectPageUp",
+    "ShiftPageDown": "SelectPageDown",
+
+	"MouseLeft": "MousePress",    
+    "MouseMiddle": "PastePrimary",
+    "ShiftHome": "SelectToStartOfTextToggle",
+    "MouseWheelDown": "ScrollDown",
+    "MouseWheelUp": "ScrollUp",
+
+	"Alt-Enter": "CommandMode",
+	"Ctrl-p": "ShellMode",
+    "Ctrl-o": "command:tree",
+    "Ctrl-q": "QuitAll",
+	
+    "Ctrl-y": "Redo",
+    "Ctrl-z": "Undo",
+    "Ctrl-s": "Save",
+	
+    "Ctrl-a": "SelectAll",
+    "Ctrl-c": "Copy|CopyLine",
+	"CtrlAlt-c": "Copy|CopyLine",
+	"Ctrl-v": "Paste",
+    "Ctrl-x": "Cut|CutLine",
+	
+    "Ctrl-d": "VSplit",
+	"CtrlAlt-d": "HSplit",
+    "Ctrl-w": "NextSplit",
+
+	"Alt-t": "AddTab",
+	"Alt-q": "Quit",
+    "Alt-.": "NextTab",
+	"Alt-,": "PreviousTab",
+
+    "Alt-/": "lua:comment.comment",
+    "Alt-Backspace": "DeleteWordLeft",
+
+    "Ctrl-g": "ToggleKeyMenu",
+	"Ctrl-MouseLeft": "MouseMultiCursor",
+
+	"Ctrl-f": "FindNext",
+    "Ctrl-Alt-f": "FindPrevious"
+}

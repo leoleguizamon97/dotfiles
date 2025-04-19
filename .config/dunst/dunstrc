@@ -1,0 +1,46 @@
+[global]
+	font = Ubuntu 10
+	frame_width = 2
+	separator_color = frame
+	padding = 10
+	horizontal_padding = 15
+	line_height = 0
+	transparency = 0
+	corner_radius = 0
+	timeout = 5
+	markup = full
+	format = "<b>%s</b>\n%b"
+	alignment = left
+	word_wrap = yes
+
+	# Ubicación por defecto (esquina superior derecha)
+	origin = top-right
+	offset = 10x10
+
+	# Distancia entre notificaciones
+	notification_height = 0
+	gap_size = 5
+
+	# Mostrar hasta 3 notificaciones a la vez
+	stack_duplicates = true
+	max_icon_size = 64
+	indicate_hidden = yes
+	icon_position = left
+
+[urgency_low]
+	background = "#1b0329cc"
+	foreground = "#c8c6d7"
+	frame_color = "#1b0329"
+	timeout = 3
+
+[urgency_normal]
+	background = "#1b0329cc"
+	foreground = "#c8c6d7"
+	frame_color = "#1b0329"
+	timeout = 5
+
+[urgency_critical]
+	background = "#881600"
+	foreground = "#e3e36a"
+	frame_color = "#4e0110"
+	timeout = 5

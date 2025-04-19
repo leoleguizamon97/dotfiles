@@ -1,0 +1,29 @@
+* {
+	font-family: Ubuntu;
+	font-size: 11pt;
+	border: none;
+}
+
+#window {
+	background-color: rgba(27, 3, 41, 0.80);
+	padding: 10px;
+}
+
+#input {
+	margin: 0px 10px;	
+	background-color: rgb(14, 3, 20);
+}
+
+#scroll {
+	margin: 10px;
+}
+
+#entry:selected {
+	padding: 5px 20px;
+	background-color:rgb(14, 3, 20);
+	border-left: 3px solid #39ff14;
+}
+
+#text {
+	margin-left: 15px;
+}

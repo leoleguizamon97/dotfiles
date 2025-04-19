@@ -1,0 +1,16 @@
+prompt= [-u-] [O.O] [o_o] [x_x] [=^.^=] [T_T] [o_O] [.-.]
+allow_images=true
+gtk_dark=true
+
+hide_scroll=true
+no_actions=true
+
+location=2
+
+width=40%
+height=25%
+
+term="foot"
+exec-search=true
+
+insensitive=true
