@@ -29,4 +29,4 @@ gnome-text-editor
 nautilus
 
 ---
-El script de wifi no es mio, pero no recuerdo de donde lo tome :s
+El script de wifi pertenece a [podobu](https://github.com/podobu/wifimenu)
