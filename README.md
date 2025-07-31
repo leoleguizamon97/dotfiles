@@ -27,3 +27,6 @@ totem
 gnome-disk-utility
 gnome-text-editor
 nautilus
+
+---
+El script de wifi no es mio, pero no recuerdo de donde lo tome :s
