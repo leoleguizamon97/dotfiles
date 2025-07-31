@@ -1,0 +1,146 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin-top": 5,
+    "margin-left": 5,
+    "margin-right": 5,
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/playerctl" ],
+    "modules-center": ["sway/window"],
+    "modules-right": [ "pulseaudio", "backlight", "network", "cpu", "memory", "temperature", "tray", "battery", "clock"],
+
+    "sway/workspaces": {
+        "all-outputs": true,
+        "format": "{name}",
+        "format-icons": {
+            "1": "󰖟",
+            "2": "",
+            "3": "",
+            "4": "󰭹",
+            "5": "󰕧",
+            "6": "",
+            "7": "",
+            "8": "󰣇",
+            "9": "",
+            "10": ""
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+
+    "sway/mode": {
+        "format": "<span>{}</span>"
+    },
+
+    "custom/playerctl": {
+        "format": " 󰐊 {}",
+        "return-type": "json",
+        "max-length": 40,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next"
+    },
+    
+    "clock": {
+        "format": "{:%I:%M %p} 󰥔",
+        "format-alt": "{:%d-%m-%Y} 󰃮",
+        "tooltip-format": "<big>{:%d-%m-%Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 4,
+            "on-click-right": "mode",
+            "format": {
+                "months":    "<span color='#d3c6aa'><b>{}</b></span>",
+                "days":      "<span color='#e67e80'>{}</span>",
+                "weeks":     "<span color='#a7c080'><b>W{}</b></span>",
+                "weekdays":  "<span color='#7fbbb3'><b>{}</b></span>",
+                "today":     "<span color='#dbbc7f'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down"
+        }
+    },
+
+    "cpu": {
+        "format": "{usage}% 󰘚",
+        "tooltip": true,
+        "interval": 1,
+        "on-click": "foot -e btop"
+    },
+
+    "memory": {
+        "format": "{}% 󰍛",
+        "interval": 1,
+        "on-click": "foot -e btop"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["󱃃", "󰔏", "󱃂"],
+        "on-click": "foot -e btop"
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% 󰚥",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) 󰖩",
+        "format-ethernet": "{ifname} 󰈀",
+        "format-linked": "{ifname} (No IP) 󰈀",
+        "format-disconnected": "Disconnected 󰖪",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "kitty -e nmtui"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% 󰂰",
+        "format-bluetooth-muted": "{icon} 󰂲",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰥰",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰄝",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%"
+    },
+
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%-"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5
+    }
+}

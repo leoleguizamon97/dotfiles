@@ -34,9 +34,8 @@ text-ver-color=#00000000
 text-wrong-color=#00000000
 
 ##### Imagen
-#image= ~/.config/sway/bg.png
-
-color=#000000DE
+#image= ~/.config/swaylock/bg.png
+color=#000000de
 
 # key press highlight segments
 key-hl-color=#1b0329cc

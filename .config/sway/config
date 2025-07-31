@@ -43,7 +43,9 @@
 ### Startup applications
 
 	exec brightnessctl s 50%
-
+	for_window [app_id="foot"] floating enable, resize set 800 500
+	for_window [app_id="eog"] floating enable, resize set 1000 700
+	
 ### Idle configuration
 
 	exec swayidle -w \
@@ -63,8 +65,8 @@
 
 ### Gestures
 
-	#bindgesture swipe:right workspace prev
-	#bindgesture swipe:left workspace next
+	bindgesture swipe:right workspace prev
+	bindgesture swipe:left workspace next
 	#bindgesture swipe:up focus parent, move container scratchpad
 	#bindgesture swipe:down scratchpad show, floating disable,
 
@@ -319,21 +321,22 @@
 	title_align					center
 	
 	# Status Bar:
-	bar {
-		position top
-		gaps 5
-		mode dock
-		#bindcode 272 exec 'if ! pgrep -x wofi; then wofi --show drun; fi'
-		bindcode 274 exec wofi --show drun
-		status_command ~/.config/sway/status.sh
-		colors {
-			statusline $txN
-			background $bgB
-			focused_workspace	#00000000 #00000000 $txN
-			inactive_workspace	$bgB $bgB $txN
-			urgent_workspace	$bgU $brU $txU
-		}
-	}
+	bar swaybar_command waybar
+#	bar {
+#		position top
+#		gaps 5
+#		mode dock
+#		#bindcode 272 exec 'if ! pgrep -x wofi; then wofi --show drun; fi'
+#		bindcode 274 exec wofi --show drun
+#		status_command ~/.config/sway/status.sh
+#		colors {
+#			statusline $txN
+#			background $bgB
+#			focused_workspace	#00000000 #00000000 $txN
+#			inactive_workspace	$bgB $bgB $txN
+#			urgent_workspace	$bgU $brU $txU
+#		}
+#	}
 
 ### Hardware
 
@@ -387,7 +390,7 @@
 		# Configuracion basica para dos pantallas (Laptop + HDMI)
 		
 			#Seleccionar monitor principal
-			workspace 1 output HDMI-A-1 
+			workspace 2 output HDMI-A-1 
 			
 			#Pantalla Integrada (Laptop)
 			output eDP-1 

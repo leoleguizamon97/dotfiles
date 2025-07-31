@@ -111,3 +111,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+clear
+
+# Inicia sway solo si estamos en tty1
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  exec sway
+fi
+
+
